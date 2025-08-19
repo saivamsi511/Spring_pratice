@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        table {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            margin: auto;
+        }
+        td {
+            padding: 12px;
+        }
+        input {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        input:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 6px rgba(0,123,255,0.5);
+        }
+        input[type="submit"] {
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/register" method="POST">
+            <table>
+                <tr>
+                    <td><label for="un">Username:</label></td>
+                    <td><input type="text" id="un" name="un" required></td>
+                </tr>
+                <tr>
+                    <td><label for="ue">Email:</label></td>
+                    <td><input type="email" id="ue" name="ue" required></td>
+                </tr>
+                <tr>
+                    <td><label for="up">Password:</label></td>
+                    <td><input type="password" id="up" name="up" required></td>
+                </tr>
+                <tr>
+                    <td><label for="ua">Age:</label></td>
+                    <td><input type="number" id="ua" name="ua" required></td>
+                </tr>
+                <tr>
+                    <td><label for="ul">Location:</label></td>
+                    <td><input type="text" id="ul" name="ul" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Register"></td>
+                </tr>
+            </table>
+        </form>
+        <p>Already Registered? <a href="http://localhost:9090/login">Login here</a></p>
+    </div>
+</body>
+</html>

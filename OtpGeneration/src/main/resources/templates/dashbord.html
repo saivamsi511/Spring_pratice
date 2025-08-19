@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+            display: flex;
+            height: 100vh;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 220px;
+            background: #007BFF;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            display: block;
+            border-radius: 6px;
+            margin: 5px 0;
+        }
+        .sidebar a:hover {
+            background: #0056b3;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .header {
+            background: white;
+            padding: 15px 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+
+        /* Image Grid */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <a href="#">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Welcome to Your Dashboard 🎉</h1>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?nature" alt="Nature">
+                <h3>Beautiful Nature</h3>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?technology" alt="Tech">
+                <h3>Latest Technology</h3>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?travel" alt="Travel">
+                <h3>Amazing Travel</h3>
+            </div>
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?food" alt="Food">
+                <h3>Delicious Food</h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
